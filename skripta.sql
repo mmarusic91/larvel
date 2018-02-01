@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS kategorija;
+DROP TABLE IF EXISTS clanak;
+
+CREATE TABLE user (
+id INT not NULL PRIMARY KEY,
+ime VARCHAR (255) NOT NULL,
+prezime VARCHAR (255) NOT NULL,
+email VARCHAR (255) NOT NULL,
+pass VARCHAR (255) NOT NULL
+) ENGINE=innoDB;
+
+CREATE TABLE kategorija (
+  id INT not NULL PRIMARY KEY,
+  naziv VARCHAR (255) NOT NULL
+) ENGINE=innoDB;
+
+CREATE TABLE clanak (
+  id INT not NULL PRIMARY KEY,
+  naslov VARCHAR (255) NOT NULL,
+  tekst TEXT NOT NULL,
+  datum DATE NOT NULL,
+  kategorija INT NOT NULL,
+  autor INT NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE clanak ADD FOREIGN KEY (kategorija) REFERENCES kategorija (id);
+ALTER TABLE clanak ADD FOREIGN KEY (autor) REFERENCES user (id);
