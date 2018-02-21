@@ -46,5 +46,6 @@ include "head.php";
     </tbody>
 
 </table>
-</body>
-</html>
+<?php
+    include "footer.php";
+?>

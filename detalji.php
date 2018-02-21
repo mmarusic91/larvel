@@ -29,6 +29,6 @@ include "head.php";
     echo $clanak->ime . " " . $clanak->prezime;
     ?>
 </p>
-</body>
-</html>
-
+<?php
+include "footer.php";
+?>
