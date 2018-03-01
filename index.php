@@ -6,6 +6,7 @@ $select->execute();
 $clanci = $select->fetchAll(PDO::FETCH_OBJ);
 
 include "head.php";
+
 ?>
 
 <table>

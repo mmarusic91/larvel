@@ -8,3 +8,4 @@ $conn = new PDO("mysql:host=" . $servername . ";dbname=" . $dbname, $username, $
 
 //Napravljena konekcija (x 1000)
 $conn->exec("set names utf8;");
+session_start();
